@@ -1,0 +1,103 @@
+/*
+Sass::SyntaxError: Undefined variable: "!font_size".
+on line 9 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/forms.sass
+
+5:   input,
+6:   textarea,
+7:   select
+8:     :font-family inherit
+9:     :font-size= !font_size+"em"
+10:     :height= !line_height - .2+"em"
+11:     :border .1em solid #900
+12:     :font-weight inherit
+13:     :margin= 0 0 (!line_height/!font_size)+"em "
+14:     :border= ".1em solid" !link_color
+15:   textarea
+
+
+Backtrace:
+/home/dan/Projects/nawara.com/www/public/stylesheets/sass/forms.sass:9
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/script/variable.rb:16:in `perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/script/operation.rb:20:in `perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/attr_node.rb:48:in `perform!'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:55:in `_perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:45:in `perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `perform_children'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `map'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `perform_children'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:60:in `perform!'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/rule_node.rb:138:in `perform!'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:55:in `_perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:45:in `perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `perform_children'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `map'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `perform_children'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:60:in `perform!'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/rule_node.rb:138:in `perform!'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:55:in `_perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:45:in `perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `perform_children'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `map'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:64:in `perform_children'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:60:in `perform!'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:55:in `_perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:45:in `perform'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/engine.rb:104:in `render'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/plugin.rb:75:in `update_stylesheet'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/plugin.rb:60:in `update_stylesheets'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/plugin.rb:55:in `each'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/plugin.rb:55:in `update_stylesheets'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/plugin.rb:53:in `each'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/plugin.rb:53:in `update_stylesheets'
+/home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/plugin/rails.rb:16:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Sass::SyntaxError: Undefined variable: \"!font_size\".\A on line 9 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/forms.sass\A \A 5:   input,\A 6:   textarea,\A 7:   select\A 8:     :font-family inherit\A 9:     :font-size= !font_size+\"em\"\A 10:     :height= !line_height - .2+\"em\"\A 11:     :border .1em solid #900\A 12:     :font-weight inherit\A 13:     :margin= 0 0 (!line_height/!font_size)+\"em \"\A 14:     :border= \".1em solid\" !link_color\A 15:   textarea\A "; }

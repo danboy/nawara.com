@@ -1,0 +1,218 @@
+!font_color ||= #333
+!base_font ||= "helvetica,arial,sans-serif"
+!headline_font ||= !base_font
+!font_size ||= 1.6
+!background_color ||= #FFF
+!page_color ||= #FFF
+!link_color ||= #369
+!page_padding ||= !line_height
+!border_color ||= !link_color
+!border_size ||= 0
+!border_style ||= "none"
+!border_radius ||= .2
+!grid_width ||= !width/10
+//Rounding
+=round_top
+  :-moz-border-radius-topleft= !border_radius+"em"
+  :-moz-border-radius-topright= !border_radius+"em"
+  :-khtml-border-top-right-radius= !border_radius+"em"
+  :-khtml-border-top-left-radius= !border_radius+"em"
+  :-webkit-border-top-right-radius= !border_radius+"em"
+  :-webkit-border-top-left-radius= !border_radius+"em"
+=round_bottom
+  :-moz-border-radius-bottomleft= !border_radius+"em"
+  :-moz-border-radius-bottomright= !border_radius+"em"
+  :-khtml-border-bottom-right-radius= !border_radius+"em"
+  :-khtml-border-bottom-left-radius= !border_radius+"em"
+  :-webkit-border-bottom-right-radius= !border_radius+"em"
+  :-webkit-border-bottom-left-radius= !border_radius+"em"
+=rounded
+  :-moz-border-radius= !border_radius+"em"
+  :-webkit-border-radius= !border_radius+"em"
+  :-khtml-border-radius= !border_radius+"em"
+
+// Global reset rules.
+// For more specific resets, use the reset mixins provided below
+=global-reset
+  html, body
+    +reset
+    :font-size 16px
+  +nested-reset
+
+// Reset all elements within some selector scope.To reset the selector itself,
+// mixin the appropriate reset mixin for that element type as well. This could be
+// useful if you want to style a part of your page in a dramatically different way.
+=nested-reset
+  div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+  pre, a, abbr, acronym, address, code, del, dfn, em, img,
+  dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr
+    +reset
+  blockquote, q
+    +reset-quotation
+  th, td, caption
+    +reset-table-cell
+  table
+    +reset-table
+  a img
+    :border none
+
+=reset-box-model
+  :margin 0
+  :padding 0
+  :border 0
+
+=reset
+  +reset-box-model
+  :font
+    :weight inherit
+    :style inherit
+    :size 100%
+    :family inherit
+  :vertical-align baseline
+
+=reset-quotation
+  +reset
+  :quotes "" ""
+  &:before,
+  &:after
+    :content ""
+
+=reset-table-cell
+  +reset
+  :text-align left
+  :font-weight normal
+  :vertical-align middle
+
+=reset-table
+  +reset
+  :border-collapse separate
+  :border-spacing 0
+  :vertical-align middle
++global-reset
+body
+  :font-size 62.5%
+  :color= !font_color
+  :font-family= !base_font
+  :line-height= !line_height+"em"
+  :background-color= !background_color
+  h1,
+  h2,
+  h3,
+  h4
+    :text-transform capitalize
+    :font-weight bold
+  h1
+    :font-size= !font_size + .6+"em"
+    :margin= (!line_height/(!font_size + .6))+"em" 0
+  h2
+    :font-size= !font_size + .3+"em"
+    :margin= (!line_height/(!font_size + .3))+"em" 0
+  h3
+    :font-size= !font_size + .2+"em"
+    :margin-bottom= -(!line_height/(!font_size + .2))+"em"
+  h4
+    :font-size= !font_size + .1+"em"
+    :margin-top= !line_height/(!font_size + .1)+"em"
+    :margin-bottom= -(!line_height/(!font_size + .1))+"em"
+  h5
+    :font-size= !font_size+"em"
+    :margin-top= !line_height/(!font_size)+"em"
+  p,
+  td,
+  th
+    :font-size= !font_size+"em"
+    :margin= (!line_height/!font_size)+"em" 0
+    p,
+    th,
+    td,
+    input,
+    label
+      :font-size 1em
+      :margin 0
+  a
+    :color= !link_color
+    :text-decoration none
+    &:hover
+      :text-decoration underline
+  ul,
+  ol
+    :display block
+    :margin 0
+    :padding 0
+    :font-size 1em
+    li
+      :margin= !line_height/!font_size+"em" 0
+      :list-style none
+      :font-size= !font_size+"em"
+      :list-style circle outside
+      ul,
+      ol,
+      p,
+      *
+        :font-size 1em
+  blockquote
+    :margin= 0 (!page_padding*4)+"em"
+  pre.example
+    :border .1em solid #900
+    :background #333
+    :color #EEE
+    :font-size= !font_size+"em"
+    :margin= (!line_height/!font_size)+"em" 0
+    :display block
+    :white-space pre-wrap       /* css-3 */
+    :white-space -moz-pre-wrap  /* Mozilla, since 1999 */
+    :white-space -pre-wrap      /* Opera 4-6 */
+    :white-space -o-pre-wrap    /* Opera 7 */
+    :word-wrap break-word       /* Internet Explorer 5.5+ */
+    code
+      :margin 0
+      :padding 0
+      :display inline-block
+  #notices
+    :width auto
+    :background-color #FFE6D4
+    :font-size= !font_size+"em"
+    :padding 0
+    :border-bottom 1px solid #999
+    .flash-notice
+      :padding 1em
+      :background-color #90ee90
+      :color #666
+    .flash-error
+      :background-color #b73b29
+      :color #DDD
+      :padding 1em
+//CLEARFIX
+=clearfix
+  display: inline-block
+  &:after
+    content: "."
+    height: 0
+    clear: both
+    visibility: hidden
+  * html &
+    height: 1px
+
+.group
+  :display inline-block
+  &:after
+    :content "."
+    :display block
+    :clear both
+    :visibility hidden
+    :line-height 0
+    :height 0
+
+* html,
+* html body
+  :height 100%
+  :overflow auto
+
+* html #overlay,
+* html #modal
+  :position absolute
+
+* html #overlay
+  :width 100%
+  :height 100%
+  :filter alpha(opacity=50)

@@ -1,0 +1,25 @@
+- if !ie?
+  !!! XML
+!!! Strict
+%html
+  %head
+    = stylesheet_link_tag 'tenplate'
+    %link{'rel' => "alternate", 'type' => "application/rss+xml", 'title' => "RSS 2.0", 'href' => "http://www.pinmonkey.com/pages/1.rss"}
+
+  %body
+    #grid
+      #content.golden
+        .main
+          = yield
+        .rail
+          = yield :rail
+
+    - # include javascript
+    = javascript_include_tag :all
+    /- if ie?
+    /  = javascript_include_tag 'http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'
+    = yield :javascript
+    :javascript
+      document.observe("dom:loaded",function(ev){
+        #{yield :onReady}
+      });
