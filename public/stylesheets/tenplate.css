@@ -71,7 +71,7 @@ body {
   color: #333333;
   font-family: helvetica,arial,sans-serif;
   line-height: 1.8em;
-  background-color: white; }
+  background-color: #eeeeee; }
   body h1,
   body h2,
   body h3,
@@ -339,7 +339,7 @@ p textarea {
 
 #grid,
 .grid {
-  width: 94.2em;
+  width: 58.2em;
   padding: 0 0.9em;
   display: inline-block;
   display: block; }
@@ -354,7 +354,7 @@ p textarea {
     height: 1px; }
   * html #grid,
   * html .grid {
-    width: 97.8em; }
+    width: 61.8em; }
 
 .one_third, .two_thirds, .main, .column_one, .rail, .column, .two_quarters, .three_quarters, .half_column, .two_thirds {
   float: left;
@@ -362,7 +362,7 @@ p textarea {
 
 .page,
 .full_page {
-  width: 90.6em;
+  width: 54.6em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -383,7 +383,7 @@ p textarea {
 .thirds .two_thirds,
 .thirds .main,
 .thirds .column_one {
-  width: 59.2em;
+  width: 35.2em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -406,7 +406,7 @@ p textarea {
 .thirds .main,
 .thirds .column_one,
 .thirds .column {
-  width: 27.8em;
+  width: 15.8em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -430,7 +430,7 @@ p textarea {
 
 .golden .main,
 .golden .column_one {
-  width: 54.619em;
+  width: 32.37em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -449,7 +449,7 @@ p textarea {
     height: 1px; }
 .golden .rail,
 .golden .column_two {
-  width: 32.381em;
+  width: 18.63em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -469,7 +469,7 @@ p textarea {
 
 .quarters .column,
 .quarters .rail {
-  width: 19.95em;
+  width: 10.95em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -488,7 +488,7 @@ p textarea {
     height: 1px; }
 .quarters .main,
 .quarters .three_quarters {
-  width: 67.05em;
+  width: 40.05em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -506,7 +506,7 @@ p textarea {
   * html .quarters .three_quarters {
     height: 1px; }
 .quarters .two_quarters {
-  width: 43.5em;
+  width: 25.5em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -522,7 +522,7 @@ p textarea {
   * html .quarters .two_quarters {
     height: 1px; }
 .quarters .half_column {
-  width: 8.175em;
+  width: 3.675em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -542,3 +542,12 @@ p textarea {
  * Include your project sass and overides here */
 body #grid {
   margin: 0 auto; }
+  body #grid #header {
+    text-align: center; }
+    body #grid #header h1 {
+      background: url(/images/logo.png) no-repeat center;
+      width: 10.2em;
+      height: 10.5em;
+      font-size: 1em;
+      text-indent: -99999em;
+      margin: 1em auto; }

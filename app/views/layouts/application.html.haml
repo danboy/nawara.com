@@ -8,11 +8,12 @@
 
   %body
     #grid
+      #header
+        %h1
+          nawara.com
       #content.golden
-        .main
+        .page
           = yield
-        .rail
-          = yield :rail
 
     - # include javascript
     = javascript_include_tag :all

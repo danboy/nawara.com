@@ -1,2 +1,11 @@
 body #grid {
   margin: 0 auto; }
+  body #grid #header {
+    text-align: center; }
+    body #grid #header h1 {
+      background: url(/images/logo.png) no-repeat center;
+      width: 10.2em;
+      height: 10.5em;
+      font-size: 1em;
+      text-indent: -99999em;
+      margin: 1em auto; }
