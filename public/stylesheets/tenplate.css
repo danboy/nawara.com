@@ -71,7 +71,7 @@ body {
   color: #333333;
   font-family: helvetica,arial,sans-serif;
   line-height: 1.8em;
-  background-color: #eeeeee; }
+  background-color: #333333; }
   body h1,
   body h2,
   body h3,
@@ -551,3 +551,5 @@ body #grid {
       font-size: 1em;
       text-indent: -99999em;
       margin: 1em auto; }
+  body #grid #content {
+    background: #cccccc; }
