@@ -12,9 +12,11 @@
         %h1
           nawara.com
       #content.golden
-        .page
-          = yield
-
+        = yield
+        -if current_user
+          %p= "logged in as #{current_user.login}, #{link_to 'logout', '/logout'}"
+        -else
+          %p= link_to "not logged in", "/login", :id => "log_in"
     - # include javascript
     = javascript_include_tag :all
     /- if ie?

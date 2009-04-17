@@ -1,22 +1,22 @@
 /*
 Sass::SyntaxError: Undefined variable: "!page_color".
-on line 15 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass
+on line 17 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass
 
-11:         :font-size 1em
-12:         :text-indent -99999em
-13:         :margin 1em auto
-14:     #content
-15:       :background= !page_color
-16: 
-17:       #page
-18:         .main
-19:       .main,
-20:       .rail,
-21:       .page,
+13:         :font-size 1em
+14:         :text-indent -99999em
+15:         :margin 1em auto 0
+16:     #content
+17:       :background= !page_color
+18:       h1
+19:         :background #FC0 url(/images/bac.png) no-repeat bottom left
+20:         :height 3em
+21:         :margin-left -1.75em
+22:         :padding 1em
+23:       .post
 
 
 Backtrace:
-/home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass:15
+/home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass:17
 /home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/script/variable.rb:16:in `perform'
 /home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/attr_node.rb:48:in `perform!'
 /home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:55:in `_perform'
@@ -106,4 +106,4 @@ script/server:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!page_color\".\A on line 15 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass\A \A 11:         :font-size 1em\A 12:         :text-indent -99999em\A 13:         :margin 1em auto\A 14:     #content\A 15:       :background= !page_color\A 16: \A 17:       #page\A 18:         .main\A 19:       .main,\A 20:       .rail,\A 21:       .page,\A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!page_color\".\A on line 17 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass\A \A 13:         :font-size 1em\A 14:         :text-indent -99999em\A 15:         :margin 1em auto 0\A 16:     #content\A 17:       :background= !page_color\A 18:       h1\A 19:         :background #FC0 url(/images/bac.png) no-repeat bottom left\A 20:         :height 3em\A 21:         :margin-left -1.75em\A 22:         :padding 1em\A 23:       .post\A "; }

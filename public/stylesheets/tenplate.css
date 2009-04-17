@@ -71,7 +71,7 @@ body {
   color: #333333;
   font-family: helvetica,arial,sans-serif;
   line-height: 1.8em;
-  background-color: #999900; }
+  background-color: #333333; }
   body h1,
   body h2,
   body h3,
@@ -339,7 +339,7 @@ p textarea {
 
 #grid,
 .grid {
-  width: 58.2em;
+  width: 48.2em;
   padding: 0 0.9em;
   display: inline-block;
   display: block; }
@@ -354,7 +354,7 @@ p textarea {
     height: 1px; }
   * html #grid,
   * html .grid {
-    width: 61.8em; }
+    width: 51.8em; }
 
 .one_third, .two_thirds, .main, .column_one, .rail, .column, .two_quarters, .three_quarters, .half_column, .two_thirds {
   float: left;
@@ -362,7 +362,7 @@ p textarea {
 
 .page,
 .full_page {
-  width: 54.6em;
+  width: 44.6em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -383,7 +383,7 @@ p textarea {
 .thirds .two_thirds,
 .thirds .main,
 .thirds .column_one {
-  width: 35.2em;
+  width: 28.533em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -406,7 +406,7 @@ p textarea {
 .thirds .main,
 .thirds .column_one,
 .thirds .column {
-  width: 15.8em;
+  width: 12.467em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -430,7 +430,7 @@ p textarea {
 
 .golden .main,
 .golden .column_one {
-  width: 32.37em;
+  width: 26.189em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -449,7 +449,7 @@ p textarea {
     height: 1px; }
 .golden .rail,
 .golden .column_two {
-  width: 18.63em;
+  width: 14.811em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -469,7 +469,7 @@ p textarea {
 
 .quarters .column,
 .quarters .rail {
-  width: 10.95em;
+  width: 8.45em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -488,7 +488,7 @@ p textarea {
     height: 1px; }
 .quarters .main,
 .quarters .three_quarters {
-  width: 40.05em;
+  width: 32.55em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -506,7 +506,7 @@ p textarea {
   * html .quarters .three_quarters {
     height: 1px; }
 .quarters .two_quarters {
-  width: 25.5em;
+  width: 20.5em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -522,7 +522,7 @@ p textarea {
   * html .quarters .two_quarters {
     height: 1px; }
 .quarters .half_column {
-  width: 3.675em;
+  width: 2.425em;
   padding: 0.9em;
   margin: 0.9em;
   border: 0em none #336699;
@@ -541,15 +541,39 @@ p textarea {
 /* Project Specific SASS
  * Include your project sass and overides here */
 body #grid {
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #FFF;
+  padding: 0; }
   body #grid #header {
     text-align: center; }
     body #grid #header h1 {
-      background: url(/images/logo.gif) no-repeat center;
-      width: 10.2em;
-      height: 10.5em;
+      background: #fff url(/images/logo.png) no-repeat 1em;
+      width: 100%;
+      height: 4em;
       font-size: 1em;
       text-indent: -99999em;
-      margin: 1em auto; }
+      margin: 1em auto 0; }
   body #grid #content {
-    background: #eeeeee; }
+    background: white; }
+    body #grid #content h1 {
+      background: #FC0 url(/images/bac.png) no-repeat bottom left;
+      height: 3em;
+      margin-left: -1.75em;
+      padding: 1em; }
+    body #grid #content .post {
+      background: #ff7f2a url(/images/bac.png) no-repeat bottom left;
+      margin-left: -3.9em;
+      padding: 1em;
+      height: 10em; }
+      body #grid #content .post.twitter {
+        background-color: #3CF; }
+      body #grid #content .post.facebook {
+        background-color: #0152a1; }
+      body #grid #content .post.blog {
+        background-color: #ff7f2a; }
+      body #grid #content .post.event {
+        background-color: #FC0; }
+      body #grid #content .post h1 {
+        background: none;
+        height: auto;
+        margin: 0; }

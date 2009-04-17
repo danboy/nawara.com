@@ -1,0 +1,8 @@
+- @items.each do |item|
+  .post{:class => "#{item.service}"}
+    %h1= item.user.login
+    %h2= item.created_at
+    %p= item.content
+    = link_to 'Show', item
+    = link_to 'Edit', edit_item_path(item)
+    = link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete

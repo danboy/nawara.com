@@ -2,17 +2,41 @@
 body
   #grid
     :margin 0 auto
+    :background #FFF
+    :padding 0
     #header
       :text-align center
       h1
-        :background url(/images/logo.gif) no-repeat center
-        :width 10.2em
-        :height 10.5em
+        :background #fff url(/images/logo.png) no-repeat 1em
+        :width 100%
+        :height 4em
         :font-size 1em
         :text-indent -99999em
-        :margin 1em auto
+        :margin 1em auto 0
     #content
       :background= !page_color
+      h1
+        :background #FC0 url(/images/bac.png) no-repeat bottom left
+        :height 3em
+        :margin-left -1.75em
+        :padding 1em
+      .post
+        :background #ff7f2a url(/images/bac.png) no-repeat bottom left
+        :margin-left -3.9em
+        :padding 1em
+        :height 10em
+        &.twitter
+          :background-color #3CF
+        &.facebook
+          :background-color #0152a1
+        &.blog
+          :background-color #ff7f2a
+        &.event
+          :background-color #FC0
+        h1
+          :background none
+          :height auto
+          :margin 0
 
       #page
         .main

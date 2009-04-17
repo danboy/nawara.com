@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @item.user_id %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @item.created_at %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @item.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
