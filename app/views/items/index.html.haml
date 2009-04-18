@@ -1,9 +1,11 @@
 - @items.each do |item|
   .post{:class => "#{item.service}"}
-    = image_tag item.user.profile.avatar.url(:thumb), :class => "avatar"
-    %h1= item.user.login
-    %h3= "#{time_ago_in_words(item.created_at)} ago."
+    = link_to image_tag( item.user.profile.avatar.url(:thumb), :class => "avatar"), {:controller => :profiles, :action => :show, :id => item.user.login}
+    %h1
+      = link_to item.user.login, {:controller => :profiles, :action => :show, :id => item.user.login}
+      %small= "#{time_ago_in_words(item.created_at)} ago."
     %p= item.content
+    .service_icon{:class => "#{item.service}"}= item.service
     = link_to 'Show', item
     = link_to 'Edit', edit_item_path(item)
     = link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete
