@@ -1,0 +1,19 @@
+%h1
+  New account
+- form_for(@account) do |f|
+  = f.error_messages
+  %div
+    = f.label :type
+    = f.select :type , %w{Facebook Twitter}
+  %div
+    = f.label :url
+    = f.text_field :url
+  %div
+    = f.label :username
+    = f.text_field :username
+  %div
+    = f.label :password
+    = f.text_field :password
+  %div
+    = f.submit 'Create'
+= link_to 'Back', accounts_path

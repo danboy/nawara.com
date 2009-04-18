@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
   #config.gem 'ruby-openid'
   config.gem "ruby-openid", :lib => "openid", :version => "2.1.4"
+  config.gem "twitter4r", :lib => "twitter"
   #config.gem 'rubyist-aasm'
   config.gem "rubyist-aasm", :lib => "aasm", :source => "http://gems.github.com"
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'

@@ -12,9 +12,12 @@
         %h1
           nawara.com
         -if current_user
-          %p.login= "logged in as #{current_user.login}, #{link_to 'logout', '/logout'}"
+          %p.login= "howdy #{current_user.login}, #{link_to 'logout', '/logout'}"
         -else
-          %p.login= link_to "not logged in", "/login", :id => "log_in"
+          %p.login
+            = link_to "log in", "/login", :id => "log_in"
+            or
+            = link_to "sign up", "/signup"
       #content.golden
         = yield
     - # include javascript
