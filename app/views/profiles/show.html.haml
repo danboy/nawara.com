@@ -1,0 +1,11 @@
+%h1= @user.login
+%p= @user.profile.description
+%dl
+  %dt Phone
+  %dd=  @user.profile.phone_number
+  %dt Address
+  %dd=  @user.profile.address1
+  %dd=  @user.profile.address2
+  %dd=  "#{@user.profile.city}, #{@user.profile.state} #{@user.profile.zip}"
+= link_to 'Edit', edit_profile_path(@user)
+= link_to 'Back', profiles_path

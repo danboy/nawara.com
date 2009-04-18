@@ -135,12 +135,14 @@ body
     &:hover
       :text-decoration underline
   ul,
+  dl,
   ol
     :display block
     :margin 0
     :padding 0
     :font-size 1em
-    li
+    li,
+    dd
       :margin= !line_height/!font_size+"em" 0
       :list-style none
       :font-size= !font_size+"em"
@@ -150,6 +152,11 @@ body
       p,
       *
         :font-size 1em
+    dt
+      :font-weight bold
+      :font-size= !font_size+"em"
+      &:after
+        :content ": "
   blockquote
     :margin= 0 (!page_padding*4)+"em"
   pre.example

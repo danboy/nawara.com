@@ -1,0 +1,45 @@
+%h1
+  Editing profile
+- form_for(@profile,:html => { :multipart => true }) do |f|
+  = f.error_messages
+  %p
+    = f.label :user_id
+
+    = f.text_field :user_id
+  %div
+    =f.label "Upload an image."
+    =f.file_field :avatar
+  %p
+    = f.label :description
+
+    = f.text_area :description
+  %p
+    = f.label :birthday
+
+    = f.date_select :birthday
+  %p
+    = f.label :phone_number
+
+    = f.text_field :phone_number
+  %p
+    = f.label :address1
+
+    = f.text_field :address1
+  %p
+    = f.label :address2
+
+    = f.text_field :address2
+  %p
+    = f.label :city
+
+    = f.text_field :city
+  %p
+    = f.label :state
+
+    = f.text_field :state
+  %p
+    = f.label :zip
+
+    = f.text_field :zip
+  %p
+    = f.submit 'Update'

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090417232612) do
+ActiveRecord::Schema.define(:version => 20090418023519) do
 
   create_table "accounts", :force => true do |t|
     t.string   "type"
@@ -27,6 +27,23 @@ ActiveRecord::Schema.define(:version => 20090417232612) do
     t.text     "content"
     t.datetime "updated_at"
     t.string   "service"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "description"
+    t.date     "birthday"
+    t.string   "phone_number"
+    t.text     "address1"
+    t.text     "address2"
+    t.text     "city"
+    t.text     "state"
+    t.integer  "zip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
   end
 
   create_table "users", :force => true do |t|

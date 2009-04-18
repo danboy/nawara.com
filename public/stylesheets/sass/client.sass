@@ -6,23 +6,31 @@ body
     :padding 0
     #header
       :text-align center
+      :width 100%
+      :height 4em
+      :font-size 1em
+      :margin 1em auto 0
       h1
-        :background #fff url(/images/logo.png) no-repeat 1em
-        :width 100%
-        :height 4em
-        :font-size 1em
+        :background #fff url(/images/logo.png) no-repeat left
         :text-indent -99999em
-        :margin 1em auto 0
+        :width 6.2em
+        :height 1em
+        :float left
+        :margin-left .5em
+      .login
+        :float right
+        :margin-right .5em
     #content
       :background= !page_color
+      :padding 1em
       h1
         :background #FC0 url(/images/bac.png) no-repeat bottom left
         :height 3em
-        :margin-left -1.75em
+        :margin 0 -.45em 0 -2.25em
         :padding 1em
       .post
         :background #ff7f2a url(/images/bac.png) no-repeat bottom left
-        :margin-left -3.9em
+        :margin 0 -1em 0 -4.9em
         :padding 1em
         :height 10em
         &.twitter
@@ -37,6 +45,10 @@ body
           :background none
           :height auto
           :margin 0
+          :padding 0
+        img.avatar
+          :float left
+          :margin 0 1em 0 0
 
       #page
         .main

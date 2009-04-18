@@ -1,0 +1,45 @@
+%h1
+  New profile for
+  = @user.login
+- form_for(@profile,:html => { :multipart => true }) do |f|
+= f.error_messages
+  %div
+    =f.label "Upload an image."
+    =f.file_field :avatar
+  %p
+    = f.hidden_field :user_id , :value => params[:id]
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :birthday
+    %br
+    = f.date_select :birthday
+  %p
+    = f.label :phone_number
+    %br
+    = f.text_field :phone_number
+  %p
+    = f.label :address1
+    %br
+    = f.text_field :address1
+  %p
+    = f.label :address2
+    %br
+    = f.text_field :address2
+  %p
+    = f.label :city
+    %br
+    = f.text_field :city
+  %p
+    = f.label :state
+    %br
+    = f.text_field :state
+  %p
+    = f.label :zip
+    %br
+    = f.text_field :zip
+  %p
+    = f.submit 'Create'
+= link_to 'Back', profiles_path

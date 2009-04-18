@@ -1,22 +1,22 @@
 /*
 Sass::SyntaxError: Undefined variable: "!page_color".
-on line 17 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass
+on line 24 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass
 
-13:         :font-size 1em
-14:         :text-indent -99999em
-15:         :margin 1em auto 0
-16:     #content
-17:       :background= !page_color
-18:       h1
-19:         :background #FC0 url(/images/bac.png) no-repeat bottom left
-20:         :height 3em
-21:         :margin-left -1.75em
-22:         :padding 1em
-23:       .post
+20:       .login
+21:         :float right
+22:         :margin-right .5em
+23:     #content
+24:       :background= !page_color
+25:       :padding 1em
+26:       h1
+27:         :background #FC0 url(/images/bac.png) no-repeat bottom left
+28:         :height 3em
+29:         :margin 0 -.45em 0 -2.25em
+30:         :padding 1em
 
 
 Backtrace:
-/home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass:17
+/home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass:24
 /home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/script/variable.rb:16:in `perform'
 /home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/attr_node.rb:48:in `perform!'
 /home/dan/Projects/nawara.com/www/vendor/plugins/haml/rails/../lib/sass/tree/node.rb:55:in `_perform'
@@ -106,4 +106,4 @@ script/server:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: Undefined variable: \"!page_color\".\A on line 17 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass\A \A 13:         :font-size 1em\A 14:         :text-indent -99999em\A 15:         :margin 1em auto 0\A 16:     #content\A 17:       :background= !page_color\A 18:       h1\A 19:         :background #FC0 url(/images/bac.png) no-repeat bottom left\A 20:         :height 3em\A 21:         :margin-left -1.75em\A 22:         :padding 1em\A 23:       .post\A "; }
+  content: "Sass::SyntaxError: Undefined variable: \"!page_color\".\A on line 24 of /home/dan/Projects/nawara.com/www/public/stylesheets/sass/client.sass\A \A 20:       .login\A 21:         :float right\A 22:         :margin-right .5em\A 23:     #content\A 24:       :background= !page_color\A 25:       :padding 1em\A 26:       h1\A 27:         :background #FC0 url(/images/bac.png) no-repeat bottom left\A 28:         :height 3em\A 29:         :margin 0 -.45em 0 -2.25em\A 30:         :padding 1em\A "; }

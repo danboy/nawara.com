@@ -1,7 +1,8 @@
 - @items.each do |item|
   .post{:class => "#{item.service}"}
+    = image_tag item.user.profile.avatar.url(:thumb), :class => "avatar"
     %h1= item.user.login
-    %h2= item.created_at
+    %h3= "#{time_ago_in_words(item.created_at)} ago."
     %p= item.content
     = link_to 'Show', item
     = link_to 'Edit', edit_item_path(item)

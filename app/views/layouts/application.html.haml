@@ -11,12 +11,12 @@
       #header
         %h1
           nawara.com
+        -if current_user
+          %p.login= "logged in as #{current_user.login}, #{link_to 'logout', '/logout'}"
+        -else
+          %p.login= link_to "not logged in", "/login", :id => "log_in"
       #content.golden
         = yield
-        -if current_user
-          %p= "logged in as #{current_user.login}, #{link_to 'logout', '/logout'}"
-        -else
-          %p= link_to "not logged in", "/login", :id => "log_in"
     - # include javascript
     = javascript_include_tag :all
     /- if ie?
