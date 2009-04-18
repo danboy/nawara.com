@@ -31,7 +31,14 @@ class AccountsController < ApplicationController
       format.xml  { render :xml => @account }
     end
   end
+  def new_twitter_account
+    @account = TwitterAccount.new
 
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @account }
+    end
+  end
   # GET /accounts/1/edit
   def edit
     @account = Account.find(params[:id])
@@ -53,7 +60,21 @@ class AccountsController < ApplicationController
       end
     end
   end
-
+  def create_twitter_account
+    @account = TwitterAccount.new(params[:account])
+    @account.user_id = current_user.id
+    respond_to do |format|
+      if @account.save
+        get_content(account,100)
+        flash[:notice] = 'Account was successfully created.'
+        format.html { redirect_to(@account) }
+        format.xml  { render :xml => @account, :status => :created, :location => @account }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @account.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
   # PUT /accounts/1
   # PUT /accounts/1.xml
   def update
@@ -85,7 +106,11 @@ class AccountsController < ApplicationController
   def check_for_updates
     @accounts = Account.all
     @accounts.each do |account|
-      account.get_content(account)
+      if account.get_content(account,10)
+        flash[:notice] = 'Accounts updated'
+      else
+        flash[:error] = 'Exploding account, probably bad username'
+      end
     end
     redirect_to root_path
   end

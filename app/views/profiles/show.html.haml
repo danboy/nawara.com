@@ -1,4 +1,6 @@
-%h1= @user.login
+%h1
+  = image_tag( @user.profile.avatar.url(:thumb), :class => "avatar")
+  = @user.login
 %p= @user.profile.description
 %dl
   %dt Phone

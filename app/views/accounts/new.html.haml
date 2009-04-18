@@ -4,7 +4,7 @@
   = f.error_messages
   %div
     = f.label :type
-    = f.select :type , %w{Facebook Twitter}
+    = f.select :type , [["facebook", "FacebookAccount"], ["twitter", "TwitterAccount"]], :id => "account_type"
   %div
     = f.label :url
     = f.text_field :url
@@ -17,3 +17,12 @@
   %div
     = f.submit 'Create'
 = link_to 'Back', accounts_path
+
+-content_for :onReady do
+  :plain
+    $("account_type").observe('change',function(ev){
+
+      if ($('account_type').value == "TwitterAccount"){
+        $('new_account').action = "/accounts/create_twitter_account"
+      }
+    });
