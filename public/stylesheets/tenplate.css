@@ -612,6 +612,8 @@ body #grid {
         background-color: #ff7f2a; }
       body #grid #content .post.event {
         background-color: #FC0; }
+      body #grid #content .post.rss {
+        background-color: #FFD42a; }
       body #grid #content .post h1 {
         background: none;
         height: auto;
@@ -630,4 +632,7 @@ body #grid {
         height: 2em; }
         body #grid #content .post .service_icon.twitter {
           background: url(/images/twitter.png) no-repeat center;
+          text-indent: -999em; }
+        body #grid #content .post .service_icon.rss {
+          background: url(/images/rss.png) no-repeat right;
           text-indent: -999em; }
