@@ -1,6 +1,9 @@
 class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.xml
+  require 'rss/1.0'
+  require 'rss/2.0'
+  require 'open-uri'
   def index
     @accounts = Account.all
 
