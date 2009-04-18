@@ -82,5 +82,11 @@ class AccountsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
+  def check_for_updates
+    @accounts = Account.all
+    @accounts.each do |account|
+      account.get_content(account)
+    end
+    redirect_to root_path
+  end
 end

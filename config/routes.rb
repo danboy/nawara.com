@@ -13,6 +13,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
 
+  map.check_for_updates '/check_for_updates', :controller => 'accounts', :action => 'check_for_updates'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
