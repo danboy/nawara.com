@@ -7,13 +7,10 @@ RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
-  #config.gem 'ruby-openid'
-  config.gem "ruby-openid", :lib => "openid", :version => "2.1.4"
+  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
+  config.gem "ruby-openid", :lib => "openid"
   config.gem "twitter4r", :lib => "twitter"
-  #config.gem 'rubyist-aasm'
   config.gem "rubyist-aasm", :lib => "aasm", :source => "http://gems.github.com"
-  config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com', :version => '~> 2.2.3'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
