@@ -2,11 +2,6 @@
 
 <% form_for(@account) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </p>
   <p>
     <%= f.label :url %><br />
     <%= f.text_field :url %>
@@ -14,10 +9,6 @@
   <p>
     <%= f.label :username %><br />
     <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
   </p>
   <p>
     <%= f.submit 'Update' %>

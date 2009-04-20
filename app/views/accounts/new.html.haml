@@ -3,8 +3,8 @@
 - form_for(@account) do |f|
   = f.error_messages
   %div
-    = f.label :type
-    = f.select :type , [["facebook", "FacebookAccount"], ["twitter", "TwitterAccount"]], :id => "account_type"
+    = select_tag "type_of" , options_for_select([["twitter", "TwitterAccount"]])
+    //= select_tag "type_of" , options_for_select([["twitter", "TwitterAccount"],["facebook", "FacebookAccount"],["RSS","RssAccount"]])
   %div
     = f.label :url
     = f.text_field :url
@@ -12,17 +12,5 @@
     = f.label :username
     = f.text_field :username
   %div
-    = f.label :password
-    = f.text_field :password
-  %div
     = f.submit 'Create'
 = link_to 'Back', accounts_path
-
--content_for :onReady do
-  :plain
-    $("account_type").observe('change',function(ev){
-
-      if ($('account_type').value == "TwitterAccount"){
-        $('new_account').action = "/accounts/create_twitter_account"
-      }
-    });

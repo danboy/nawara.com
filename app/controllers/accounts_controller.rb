@@ -34,14 +34,6 @@ class AccountsController < ApplicationController
       format.xml  { render :xml => @account }
     end
   end
-  def new_twitter_account
-    @account = TwitterAccount.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @account }
-    end
-  end
   # GET /accounts/1/edit
   def edit
     @account = Account.find(params[:id])
@@ -50,27 +42,21 @@ class AccountsController < ApplicationController
   # POST /accounts
   # POST /accounts.xml
   def create
-    @account = Account.new(params[:account])
-    @account.user_id = current_user.id
-    respond_to do |format|
-      if @account.save
-        flash[:notice] = 'Account was successfully created.'
-        format.html { redirect_to(@account) }
-        format.xml  { render :xml => @account, :status => :created, :location => @account }
+    case params[:type_of]
+      when "TwitterAccount"
+        create_twitter_account(params[:account][:username])
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @account.errors, :status => :unprocessable_entity }
+        redirect_to :controller => :accounts, :action => :new
       end
-    end
   end
-  def create_twitter_account
-    @account = TwitterAccount.new(params[:account])
+  def create_twitter_account(account_username)
+    @account = TwitterAccount.new()
+    @account.username = account_username
     @account.user_id = current_user.id
     respond_to do |format|
       if @account.save
-        get_content(account,100)
         flash[:notice] = 'Account was successfully created.'
-        format.html { redirect_to(@account) }
+        format.html { redirect_to :controller => :accounts , :action => :check_for_updates}
         format.xml  { render :xml => @account, :status => :created, :location => @account }
       else
         format.html { render :action => "new" }
