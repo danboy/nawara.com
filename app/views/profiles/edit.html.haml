@@ -1,5 +1,6 @@
 %h1
   Editing profile
+%p= link_to "add a twitter or rss  account", :controller => :accounts, :action => :new
 - form_for(@profile,:html => { :multipart => true }) do |f|
   = f.error_messages
   = f.hidden_field :user_id

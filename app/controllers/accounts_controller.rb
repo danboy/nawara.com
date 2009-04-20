@@ -45,6 +45,8 @@ class AccountsController < ApplicationController
     case params[:type_of]
       when "TwitterAccount"
         create_twitter_account(params[:account][:username])
+      when "RssAccount"
+        create_rss_account(params[:account][:url])
       else
         redirect_to :controller => :accounts, :action => :new
       end
@@ -52,6 +54,21 @@ class AccountsController < ApplicationController
   def create_twitter_account(account_username)
     @account = TwitterAccount.new()
     @account.username = account_username
+    @account.user_id = current_user.id
+    respond_to do |format|
+      if @account.save
+        flash[:notice] = 'Account was successfully created.'
+        format.html { redirect_to :controller => :accounts , :action => :check_for_updates}
+        format.xml  { render :xml => @account, :status => :created, :location => @account }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @account.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  def create_rss_account(account_url)
+    @account = RssAccount.new()
+    @account.url = account_url
     @account.user_id = current_user.id
     respond_to do |format|
       if @account.save

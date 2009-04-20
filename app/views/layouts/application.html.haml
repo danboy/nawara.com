@@ -12,7 +12,7 @@
         %h1
           nawara.com
         -if current_user
-          %p.login= "howdy #{current_user.login}, #{link_to 'logout', '/logout'}"
+          %p.login= "howdy #{link_to current_user.login, :controller => :profiles, :action => :edit, :id => current_user.id}, #{link_to 'logout', '/logout'}"
         -else
           %p.login
             = link_to "log in", "/login", :id => "log_in"
