@@ -1,11 +1,22 @@
-- @items.each do |item|
-  .post{:class => "#{item.service}"}
-    = link_to image_tag( item.user.profile.avatar.url(:thumb), :class => "avatar"), {:controller => :profiles, :action => :show, :id => item.user.login}
-    %h1
-      = link_to item.user.login, {:controller => :profiles, :action => :show, :id => item.user.login}
-      %small= "#{time_ago_in_words(item.created_at)} ago."
-    %p= item.content
-    .service_icon{:class => "#{item.service}"}= item.service
-    = link_to 'Show', item
-    = link_to 'Edit', edit_item_path(item)
-    = link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete
+#item_list
+  - @items.each do |item|
+    .post
+      .post_content
+        .post_excerpt{:class => "#{item.service}"}
+          = link_to image_tag( item.user.profile.avatar.url(:thumb), :class => "avatar"), {:controller => :profiles, :action => :show, :id => item.user.login}
+          %h1
+            = link_to item.user.login, {:controller => :profiles, :action => :show, :id => item.user.login}
+            %small= "#{time_ago_in_words(item.created_at)} ago."
+          %p= truncate(item.content.gsub(/<\/?[^>]*>/,  ""), :length => 140)
+        .post_body{:style => "display:none;"}
+          - if item.service == "twitter"
+            %p= item.content
+          - else
+            = item.content
+      .service_icon{:class => "#{item.service}"}= item.service
+      -if current_user && (current_user.id = item.user_id)
+        = link_to 'Show', item
+        = link_to 'Edit', edit_item_path(item)
+        = link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete
+- content_for :onReady do
+  new Accordion("item_list",{subMenuType: ".post_body"})

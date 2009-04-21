@@ -24,36 +24,40 @@ body
       :background= !page_color
       :padding 1em
       h1
-        :background #FC0 url(/images/bac.png) no-repeat bottom left
+        :background #FC0 url(/images/bac.png) no-repeat 6em left
         :height 3em
         :margin 0 -.45em 0 -2.25em
         :padding 1em
       .post
-        :background #ff7f2a url(/images/bac.png) no-repeat bottom left
-        :margin 0 -1em 0 -4.9em
-        :padding 1em
-        :height 10em
         :position relative
-        &.twitter
-          :background-color #3CF
-        &.facebook
-          :background-color #0152a1
-        &.blog
-          :background-color #ff7f2a
-        &.event
-          :background-color #FC0
-        &.rss
-          :background-color #FFD42a
-        h1
-          :background none
-          :height auto
-          :margin 0
-          :padding 0
-          :font-size 1.8em
-          :color #333
-        img.avatar
-          :float left
-          :margin 0 1em 0 0
+        .post_excerpt
+          :background #ff7f2a url(/images/bac.png) no-repeat left bottom
+          :margin 0 -1em 0 -4.8em
+          :padding 1em
+          :height 10em
+          &.twitter
+            :background-color #3CF
+          &.facebook
+            :background-color #0152a1
+          &.blog
+            :background-color #ff7f2a
+          &.event
+            :background-color #FC0
+          &.rss
+            :background-color #FFD42a
+          h1
+            :background none
+            :height auto
+            :margin 0
+            :padding 0
+            :font-size 1.8em
+            :color #333
+          p
+            :margin .5em 0 0
+          img.avatar
+            :float left
+            :margin 0 1em 4.2em 0
+            :background #FFF
         .service_icon
           :position absolute
           :right 1em
