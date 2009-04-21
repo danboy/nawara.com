@@ -24,9 +24,9 @@ body
       :background= !page_color
       :padding 1em
       h1
-        :background #FC0 url(/images/bac.png) no-repeat 6em left
+        :background #FC0 url(/images/bac.png) no-repeat bottom left
         :height 3em
-        :margin 0 -.45em 0 -2.25em
+        :margin 0 -.45em 0 -2.2em
         :padding 1em
       .post
         :position relative
@@ -45,6 +45,7 @@ body
             :background-color #FC0
           &.rss
             :background-color #FFD42a
+            :cursor pointer
           h1
             :background none
             :height auto
@@ -60,12 +61,12 @@ body
             :background #FFF
         .service_icon
           :position absolute
-          :right 1em
+          :right 0em
           :top 1em
           :width 6em
           :height 2em
           &.twitter
-            :background url(/images/twitter.png) no-repeat center
+            :background url(/images/twitter.png) no-repeat right
             :text-indent -999em
           &.rss
             :background url(/images/rss.png) no-repeat right

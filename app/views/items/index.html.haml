@@ -9,9 +9,7 @@
             %small= "#{time_ago_in_words(item.created_at)} ago."
           %p= truncate(item.content.gsub(/<\/?[^>]*>/,  ""), :length => 140)
         .post_body{:style => "display:none;"}
-          - if item.service == "twitter"
-            %p= item.content
-          - else
+          - if item.service != "twitter"
             = item.content
       .service_icon{:class => "#{item.service}"}= item.service
       -if current_user && (current_user.id = item.user_id)
@@ -19,4 +17,4 @@
         = link_to 'Edit', edit_item_path(item)
         = link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete
 - content_for :onReady do
-  new Accordion("item_list",{subMenuType: ".post_body"})
+  new Accordion("item_list",{subMenuType: ".post_body", firstRun: false})
