@@ -11,7 +11,7 @@ class RssAccount < Account
           @item = Item.new()
           @item.service = "rss"
           @item.content = item.description
-          #@item.created_at = item.date
+          @item.created_at = item.date.to_date
           @item.user_id = account.user_id
           @item.save() if Item.find_by_content(item.description).nil?
         end
