@@ -10,7 +10,7 @@
     #grid
       #header
         %h1
-          nawara.com
+          = link_to "nawara.com", root_path
         -if current_user
           %p.login= "howdy #{link_to current_user.login, :controller => :profiles, :action => :edit, :id => current_user.id}, #{link_to 'logout', '/logout'}"
         -else
