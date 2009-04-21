@@ -587,6 +587,12 @@ body #grid {
       height: 1em;
       float: left;
       margin-left: .5em; }
+      body #grid #header h1 a {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        text-indent: -9999em;
+        display: block; }
     body #grid #header .login {
       float: right;
       margin-right: .5em; }
