@@ -7,7 +7,7 @@
           %h1
             = link_to item.user.login, {:controller => :profiles, :action => :show, :id => item.user.login}
             %small= "#{time_ago_in_words(item.created_at)} ago."
-          %p= truncate(item.content.gsub(/<\/?[^>]*>/,  ""), :length => 140)
+          %p= truncate(item.content.gsub(/<\/?[^>]*>/,  ""), :length => 140).gsub /(http|ftp|https):\/\/[^\s]*/, "<a href='\\0'>\\0</a>"
         .post_body{:style => "display:none;"}
           - if item.service != "twitter"
             = item.content
