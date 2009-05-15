@@ -3,7 +3,7 @@
 - form_for(@account) do |f|
   = f.error_messages
   %div
-    = select_tag "type_of" , options_for_select([["twitter", "TwitterAccount"],["RSS","RssAccount"]])
+    = select_tag "type_of" , options_for_select([["twitter", "TwitterAccount"],["RSS","RssAccount"],["i-cal","IcalAccount"]])
     //= select_tag "type_of" , options_for_select([["twitter", "TwitterAccount"],["facebook", "FacebookAccount"],["RSS","RssAccount"]])
   %div
     = f.label :url

@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
   config.gem "ruby-openid", :lib => "openid"
   config.gem "twitter4r", :lib => "twitter"
+  config.gem "icalendar", :lib => "icalendar"
   config.gem "rubyist-aasm", :lib => "aasm", :source => "http://gems.github.com"
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
